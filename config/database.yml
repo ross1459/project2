@@ -1,0 +1,8 @@
+# config/database.yml
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: project2
+  pool: 5
+  username: ross
+  password: password
