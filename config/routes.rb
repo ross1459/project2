@@ -9,9 +9,16 @@ Project2::Application.routes.draw do
   get "suggestions/edit"
 
   get "suggestions/index"
+  match "suggestions/index" => "suggestions#index"
   
   get "suggestions/chooseSuggestion"
   match "suggestions/chooseSuggestion" => "suggestions#chooseSuggestion"
+  
+  get "suggestions/update"
+  match "suggestions/update" => "suggestions#update"
+  
+  get "suggestions/edit"
+  match "suggestions/edit" => "suggestions#edit"
 
   get "users/index"
   

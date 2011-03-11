@@ -1,2 +1,7 @@
-<h1>Suggestions#edit</h1>
-<p>Find me in app/views/suggestions/edit.html.erb</p>
+<!--Find me in app/views/suggestions/edit.html.erb-->
+<%= form_for @UserSuggestions, :url => { :action => "update" } do |f| %>
+  <%= f.label "Body:" %>
+  <%= f.text_field :body %><br>
+  <%= f.hidden_field :suggid %>
+  <%= f.submit "submit" %>
+<% end %>

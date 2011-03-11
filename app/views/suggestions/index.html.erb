@@ -5,14 +5,23 @@
     <td>Name</td>
     <td>Division</td>
     <td>Department</td>
+    <td>Created At</td>
+    <td>Updated At</td>
     <td>Body</td>
+  </tr>
   <% @suggestions.each do |s| %>
     <tr>
       <td><%= s.name %></td>
       <td><%= s.division %></td>
       <td><%= s.department %></td>
+      <td><%= s.created_at %></td>
+      <td><%= s.updated_at %></td>
       <td><%= s.body %></td>
     </tr>
   <% end %>
 </table>
 
+<% if cookies.signed[:user_id] > 0 %>
+  <%= link_to "Make New Post", :controller => "suggestions", :action => "new" %>
+  <%= link_to "Edit Suggestions", :controller => "suggestions", :action => "chooseSuggestion" %>
+<% end %>
