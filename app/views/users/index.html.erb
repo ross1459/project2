@@ -1,0 +1,11 @@
+<!--Find me in app/views/users/index.html.erb-->
+<table border="1">
+  <% @users.each do |u| %>
+    <tr>
+      <td><%= u.name %></td>
+      <td><%= u.division %></td>
+      <td><%= u.department %></td>
+      <td><%= u.username %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,18 @@
+<!--Find me in app/views/suggestions/index.html.erb-->
+<h1>Thank you for logging in</h1>
+<table border="1">
+  <tr>
+    <td>Name</td>
+    <td>Division</td>
+    <td>Department</td>
+    <td>Body</td>
+  <% @suggestions.each do |s| %>
+    <tr>
+      <td><%= s.name %></td>
+      <td><%= s.division %></td>
+      <td><%= s.department %></td>
+      <td><%= s.body %></td>
+    </tr>
+  <% end %>
+</table>
+
