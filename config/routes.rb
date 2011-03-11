@@ -1,4 +1,21 @@
+#config/routes.rb
 Project2::Application.routes.draw do
+  get "pages/login"
+  match "pages/login" => "pages#login"
+  get "pages/logout"
+
+  get "suggestions/new"
+  match "suggestions/create" => "suggestions#create"
+  get "suggestions/edit"
+
+  get "suggestions/index"
+  
+  get "suggestions/chooseSuggestion"
+  match "suggestions/chooseSuggestion" => "suggestions#chooseSuggestion"
+
+  get "users/index"
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
